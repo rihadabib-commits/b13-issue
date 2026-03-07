@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <!-- Tailwind + DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="min-h-screen max-w-md bg-[#FFFFFF] mx-auto shadow-xl">
+
+  
+    <!-- Login Form -->
+    <div class="form pt-10">
+        <div class="card  w-full  shadow-2xl rounded-2xl mx-auto">
+            <div class="card-body">
+
+              <div class="logo w-[200px] mx-auto pt-32 items-center justify-center flex">
+    <img src="B13-A5-Github-Issue-Tracker/assets/github-logo.png" alt="GitHub Logo" />
+</div>
+
+<!-- Title Section -->
+<div class="text-center mt-4">
+    <h2 class="text-2xl font-bold">GitHub Issues Tracker</h2>
+    <p class="font-semibold">Sign in to manage your issues</p>
+</div>
+                <fieldset class="fieldset">
+                    <label class="label font-bold">Username</label>
+                    <input   type="text" maxlength="8" minlength="1" class=" border w-full input rounded-xl" placeholder="Enter Username" />
+                    <h2 class="text-[#4A00FF]">Default: admin</h2>
+
+                    <label class="label font-bold">Password</label>
+                    <input   type="password" class="input border w-full rounded-xl" placeholder="Enter Password" />
+                    <div><a class="link link-hover text-[#4A00FF]">Default: admin123</a></div>
+
+                    <button id="singup-btn" class="btn btn-neutral mt-4 text-white bg-[#4A00FF] rounded-2xl">
+                        Sign In
+                    </button>
+                    
+                     <h2 class="items-center mx-auto flex justify-center">
+                      
+                      OR</h2>
+                      <hr>
+
+
+                     <h2 class="items-center mx-auto flex justify-center font-semibold opacity-50">Demo Credentials:</h2>
+
+                     <div class=" max-w-md bg-[#F8FAFC] mx-auto shadow-l pl-20 pr-20 pt-5 pb-5 rounded-xl">
+                          <h2> <span class="font-bold ">Username:</span> admin</h2>
+                        
+                          <p> <span class="font-bold">Password:</span> admin123</p>
+                     </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+               
+             
+
+    <!-- JS -->
+    <script src="singup.js"></script>
+</body>
+</html>
