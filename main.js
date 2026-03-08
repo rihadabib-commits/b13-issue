@@ -67,7 +67,7 @@ function displayIssues(issues){
         card.innerHTML = `
         <div class="flex justify-between">
             <img src="${statusImg}" class="w-5 h-5">
-            <span class="text-xs bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full">
+            <span class="text-xs  bg-red-100 text-red-600 px-3 py-1 rounded-full">
                 ${item.priority || "LOW"}
             </span>
         </div>
@@ -75,8 +75,25 @@ function displayIssues(issues){
         <div>
             <h3 class="font-bold text-lg">${item.title}</h3>
             <p class="text-gray-500 text-sm">${item.description}</p>
-        </div>
+        </div>  
 
+  
+        <div class="flex gap-2">
+  ${item.type ? `
+    <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full flex items-center gap-1">
+      <img src="B13-A5-Github-Issue-Tracker/assets/BugDroid.png" alt="" class="h-3 w-3">
+      ${item.type}
+    </span>
+  ` : ''}
+
+  ${item.labels && item.labels.length ? item.labels.map(label => `
+    <span class="text-xs bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full flex items-center gap-1">
+      <img src="B13-A5-Github-Issue-Tracker/assets/Lifebuoy.png" alt="" class="h-3 w-3">
+      ${label}
+    </span>
+  `).join('') : ''}
+</div>
+    
         <hr>
 
         <div class="text-xs text-gray-400">
